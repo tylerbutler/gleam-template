@@ -26,6 +26,8 @@ just format-check # Check formatting
 just check        # Type check
 just docs         # Build documentation
 just ci           # Run all CI checks (format, check, test, build)
+just pr           # Alias for ci (use before PR)
+just main         # Extended checks for main branch
 just clean        # Remove build artifacts
 ```
 
@@ -37,7 +39,14 @@ src/
 └── my_gleam_project/        # Submodules (if needed)
     └── internal/            # Private implementation (mark in gleam.toml)
 test/
-└── my_gleam_project_test.gleam
+├── my_gleam_project_test.gleam
+└── test_helpers.gleam       # Shared test utilities
+examples/
+└── hello_world/             # Runnable example project
+    ├── gleam.toml           # Path dependency on main library
+    ├── src/hello_world.gleam
+    ├── test/hello_world_test.gleam
+    └── README.md
 ```
 
 ## Architecture
@@ -126,3 +135,22 @@ Local development can use `.mise.toml` for flexible versions.
 - Follow `gleam format` output
 - Keep public API minimal
 - Document public functions with `///` comments
+
+## Commit Messages
+
+Use [Conventional Commits](https://www.conventionalcommits.org/):
+
+```
+feat(parser): add support for nested objects
+fix(validation): handle empty strings correctly
+docs: update installation instructions
+```
+
+Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`
+
+See `.commitlintrc.json` for configuration.
+
+## Additional Documentation
+
+- **DEV.md**: Detailed development workflows and guidelines
+- **examples/**: Runnable examples demonstrating library usage

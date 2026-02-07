@@ -66,6 +66,9 @@ ci: format-check check test build-strict
 # Alias for PR checks
 alias pr := ci
 
+# Run extended checks for main branch
+main: ci docs
+
 # =============================================================================
 # MULTI-TARGET SUPPORT (Uncomment if targeting JavaScript)
 # =============================================================================
