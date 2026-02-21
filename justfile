@@ -6,6 +6,7 @@ alias t := test
 alias f := format
 alias c := check
 alias d := docs
+alias cl := change
 
 default:
     @just --list
@@ -51,6 +52,20 @@ check:
 # Build documentation
 docs:
     gleam docs build
+
+# === CHANGELOG ===
+
+# Create a new changelog entry
+change:
+    changie new
+
+# Preview unreleased changelog
+changelog-preview:
+    changie batch auto --dry-run
+
+# Generate CHANGELOG.md
+changelog:
+    changie merge
 
 # === MAINTENANCE ===
 
