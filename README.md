@@ -26,6 +26,22 @@ pub fn main() {
 
 ### Setup Options
 
+#### Changelog Kinds
+
+By default, changie is configured with **kinds** (Added, Changed, Fixed, etc.) which categorize changelog entries. If you prefer a simpler changelog without kind categorization:
+
+1. Replace `.changie.yaml` with `.changie.no-kinds.yaml`:
+   ```sh
+   mv .changie.no-kinds.yaml .changie.yaml
+   ```
+
+To keep kinds (the default), just delete the alternative config:
+```sh
+rm .changie.no-kinds.yaml
+```
+
+#### CI Options
+
 This template includes two CI options:
 
 1. **Local setup action** (default): Self-contained, no external dependencies
