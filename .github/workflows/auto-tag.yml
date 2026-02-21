@@ -1,0 +1,12 @@
+name: Auto-tag release
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  auto-tag:
+    uses: tylerbutler/actions/.github/workflows/auto-tag.yml@595187399f4d5ca2d5a927473407e10edaa05434 # ratchet:tylerbutler/actions/.github/workflows/auto-tag.yml@main
+    with:
+      create-release: true
