@@ -11,7 +11,7 @@ runs:
   using: "composite"
   steps:
     - name: Setup just
-      uses: extractions/setup-just@e33e55d6ef2b5e1c0cf05ca8244f68a5b9635883 # ratchet:extractions/setup-just@v2
+      uses: extractions/setup-just@dd310ad5a97d8e7b41793f8ef055398d51ad4de6 # ratchet:extractions/setup-just@v2
 
     - name: Setup BEAM
       uses: erlef/setup-beam@e6d7c94229049569db56a7ad5a540c051a010af9 # ratchet:erlef/setup-beam@v1
