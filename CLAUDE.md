@@ -150,6 +150,14 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`
 
 See `.commitlintrc.json` for configuration.
 
+## Template Configuration
+
+### Changelog Kinds
+- **`.changie.yaml`** (default): Uses kinds (Added, Changed, Fixed, etc.) to categorize entries
+- **`.changie.no-kinds.yaml`**: Simpler changelog without kind categorization
+- To switch: `mv .changie.no-kinds.yaml .changie.yaml`
+- To keep default: `rm .changie.no-kinds.yaml`
+
 ## Additional Documentation
 
 - **DEV.md**: Detailed development workflows and guidelines
